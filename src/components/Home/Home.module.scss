@@ -1,0 +1,49 @@
+@import '../../variables';
+
+.category{
+    color: #63b46e;
+   
+    font: {
+        size:1.30rem ;
+        weight:400 ;
+    }
+}
+.rating{
+    color: $ratingColor;
+    font-size: 13px;
+}
+
+.item{
+   
+    transition: all 2s ;
+    overflow: hidden;
+    // &:hover{
+    //     border: #63b46e 1px solid;
+        
+    // }
+//     &:hover .addBtn{
+//         transform: translateY(0%);
+//    opacity: 1;
+//     }
+//     .addBtn{
+//         background-color: #63b46e;
+//        transform: translateY(100%);
+//        opacity: 0;
+//     }
+}
+
+.itemBtn{
+
+
+    transition: all 2s ;
+    overflow: hidden;
+    &:hover .addBtn{
+        transform: translateY(0%);
+   opacity: 1;
+    }
+    .addBtn{
+        background-color: #63b46e;
+       transform: translateY(100%);
+       opacity: 0;
+    }
+}

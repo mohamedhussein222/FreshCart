@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;1,100&family=Caveat&family=Lobster&family=Oswald:wght@300&family=Playfair:ital,wght@1,300&family=Poltawski+Nowy&family=Slabo+27px&family=Source+Serif+Pro:wght@300&family=Teko:wght@500&display=swap');
+:root{
+	font-family: 'Comfortaa', cursive !important;
+	font-family: 'Labrada', serif !important;
+	font-family: 'Shantell Sans', cursive !important;
+}
+body{
+	font-family: 'Comfortaa', cursive !important;
+	font-family: 'Labrada', serif !important;
+	font-family: 'Shantell Sans', cursive !important;
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(../src/Images/light-patten.svg);
+  background-size: 100%;
+  background-position: 100% 100%;
+
+}
+
+
+a{
+  text-decoration: none !important;
+}
+/////////////// Loading Screen 
+
+.nav-link{
+	transition: all 1s;
+}
+
+.nav-link:hover{
+	color: #198754 !important;
+}
+
+
+.itemCategory{
+background-color:#F0F3F2;
+
+  img{
+      height: 300px;
+  }
+ 
+}
+////////////////
+ 
+  .star-main{
+	color: #ffc908;
+  }
+ 
+  
+///////////////////////////////////////////
+
+
+.btnProduct{
+	transform: translateY(100%);
+	opacity: 0;
+    transition: transform 1s, opacity 1s;
+  }
+  .itemProducts{
+    background-color: #eeeeee;
+	transition: all 0.5s ;
+  }
+  .itemProducts:hover{
+	
+		border: 2px #198754 solid;
+		
+
+	
+  }
+  .itemProducts:hover .btnProduct{
+    transform: translateY(0);
+	opacity: 1;
+  }
+
+
+
+
+
+
+
+
+

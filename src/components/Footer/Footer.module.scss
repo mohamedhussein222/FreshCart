@@ -1,0 +1,21 @@
+@import '../../_variables.scss';
+footer{
+    background-color: $mainColor!important;
+}
+ li{
+    list-style: none;
+   
+}
+.sort{
+    width: 100px;
+    margin-left: 20px;
+}
+.payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+  
+@extend .payment ;
+}

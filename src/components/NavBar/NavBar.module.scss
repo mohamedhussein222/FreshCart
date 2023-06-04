@@ -1,0 +1,14 @@
+@import '../../_variables.scss';
+nav{
+    background-color: $mainColor;
+   
+//     right: 0 ; 
+// left: 0;
+// z-index: 99999999999 !important;
+}
+.logo{
+    width: 150px;
+}
+.nav-link{
+    font-size: 5rem !important;
+}
