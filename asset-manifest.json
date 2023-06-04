@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/FreshCart/static/css/main.f701765a.css",
+    "main.js": "/FreshCart/static/js/main.738f6995.js",
+    "static/js/787.8e15dc5b.chunk.js": "/FreshCart/static/js/787.8e15dc5b.chunk.js",
+    "static/media/light-patten.svg": "/FreshCart/static/media/light-patten.ed706aff39a009de4e80.svg",
+    "static/media/slider-2.jpeg": "/FreshCart/static/media/slider-2.92200ddb54f84e0e8c71.jpeg",
+    "static/media/fa-solid-900.ttf": "/FreshCart/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/appstore.png": "/FreshCart/static/media/appstore.11156c0c81561772662d.png",
+    "static/media/grocery-banner.png": "/FreshCart/static/media/grocery-banner.2c56649c9cbe2e19b86f.png",
+    "static/media/mastercard.png": "/FreshCart/static/media/mastercard.c1c3f1e9c8aad6e536df.png",
+    "static/media/amazonpay.png": "/FreshCart/static/media/amazonpay.4c19657621827b32a540.png",
+    "static/media/fa-brands-400.ttf": "/FreshCart/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/grocery-banner-2.jpeg": "/FreshCart/static/media/grocery-banner-2.7a4a78a90acc3d5847cb.jpeg",
+    "static/media/fa-solid-900.woff2": "/FreshCart/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/error.svg": "/FreshCart/static/media/error.084f5f5b0eb10d3216cb7c939108e1f6.svg",
+    "static/media/fa-brands-400.woff2": "/FreshCart/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/googleplay.png": "/FreshCart/static/media/googleplay.88c0cf672ae4dd873d7f.png",
+    "static/media/fa-regular-400.ttf": "/FreshCart/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/no-product-found.png": "/FreshCart/static/media/no-product-found.586b20ff4a41075a2c4e.586b20ff4a41075a2c4e.png",
+    "static/media/fa-regular-400.woff2": "/FreshCart/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/paypal.png": "/FreshCart/static/media/paypal.e3abf7ded251409784b6.png",
+    "static/media/americanexpress.png": "/FreshCart/static/media/americanexpress.23e3b98512ffad5d0ad1.png",
+    "static/media/mastercard.svg": "/FreshCart/static/media/mastercard.e69033f4c72a69b30b4ee7d0a7e628fd.svg",
+    "static/media/freshcart-logo.png": "/FreshCart/static/media/freshcart-logo.65ebe5c436154972e349.png",
+    "static/media/fa-v4compatibility.ttf": "/FreshCart/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/amazonpay.svg": "/FreshCart/static/media/amazonpay.b7df539c055ea119771e7c11c78b9e25.svg",
+    "static/media/express.svg": "/FreshCart/static/media/express.31240f3ceab66afcf4231e0a3de7a1c7.svg",
+    "static/media/fa-v4compatibility.woff2": "/FreshCart/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "static/media/slick.svg": "/FreshCart/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/FreshCart/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/FreshCart/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/FreshCart/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/FreshCart/index.html",
+    "main.f701765a.css.map": "/FreshCart/static/css/main.f701765a.css.map",
+    "main.738f6995.js.map": "/FreshCart/static/js/main.738f6995.js.map",
+    "787.8e15dc5b.chunk.js.map": "/FreshCart/static/js/787.8e15dc5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f701765a.css",
+    "static/js/main.738f6995.js"
+  ]
+}
