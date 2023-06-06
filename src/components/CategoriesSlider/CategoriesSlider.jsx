@@ -36,7 +36,7 @@ export default  function CategoriesSlider(props) {
          {categories.map((item)=>{return <div >
             <Link to={`/ProductCategory/${item._id}`}>
             <img src={item.image} className="w-100 " height={150} />
-            <h6 className="py-2 text-center text-dark lead">{item.name}</h6>
+            <h6  className="py-2 text-center text-dark lead mx-2"> {item.name}</h6>
             </Link>
          </div>
         

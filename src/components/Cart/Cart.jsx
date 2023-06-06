@@ -72,7 +72,7 @@ if(responseCount.data.status=='success'){
             <h6>Number of Cart Items:<span className="text-dark"> {numOfCartItems} Products</span></h6>
             </div>
             <div className="row">
-        {products.length==0? products.map((pro)=>{return <div className="col-md-12 bg-light gy-2 d-flex justify-content-center align-items-center animate__zoomIn animate__animated animate__bounce  animate__delay-1s ">
+        { products.map((pro)=>{return <div className="col-md-12 bg-light gy-2 d-flex justify-content-center align-items-center animate__zoomIn animate__animated animate__bounce  animate__delay-1s ">
       <div className="col-md-1 col-4  ">
 <img src={pro.product.imageCover} className="w-100"/>
 <div className="py-2">
@@ -97,7 +97,7 @@ if(responseCount.data.status=='success'){
         
       </div>
      </div>
-}):<NoProducts/>}
+})}
 
             <button  onClick={()=>{
               navigatePayment('/payment')

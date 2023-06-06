@@ -27,7 +27,7 @@ useEffect(()=>{
             <div className="row g-4">
               {AllProducts.length==0?<NoProducts/>: AllProducts.map((Product)=>{return  <div className="col-md-3  col-6">
                   <Link to={`/productdetails/${Product.id}`}>
-                  <div className="itemProducts p-1 rounded ">
+                  <div className="itemProducts  rounded ">
                    <img src={Product.imageCover} className="w-100" alt={Product.title}/>
                    <h6 className=" mt-3 px-3 text-success text-start ">{Product.title.split(' ').slice(0,2).join(' ')}</h6>
                    <h6 className="text-black px-3 mt-3 ">{Product.category.name}</h6>

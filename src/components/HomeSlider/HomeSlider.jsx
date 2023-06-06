@@ -33,6 +33,7 @@ export default  function HomeSlider(props) {
         <SwiperSlide><img src={require('../../Images/grocery-banner.png')}  className='w-100'/></SwiperSlide>
         <SwiperSlide> <img src={require('../../Images/slider-2.jpeg')} className='w-100'/></SwiperSlide>
         <SwiperSlide><img src={require('../../Images/grocery-banner-2.jpeg')}  className='w-100'/></SwiperSlide>
+        
       
       </Swiper>
           {/* <Slider {...settings} autoplaySpeed={2000} >
