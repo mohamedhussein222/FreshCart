@@ -3,6 +3,7 @@ import { dataContext } from "../../Context/ContextStore"
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import NoProducts from "../NoProducts/NoProducts";
 
 export default  function Cart(props) {
   let {GetLoggedusercart,GetIdcart ,RemovespecificcartItem,Updatecartproductquantity } =   useContext(dataContext);
@@ -10,7 +11,7 @@ export default  function Cart(props) {
   let navigatePayment =   useNavigate();
  let [numOfCartItems,setnumOfCartItems]=useState(0);
  let [totalCartPrice ,settotalCartPrice]=useState(0);
- let [products, setproducts]=useState(null);
+ let [products, setproducts]=useState([]);
 
     async function getCart(){
    let response =   await GetLoggedusercart();
@@ -63,7 +64,7 @@ if(responseCount.data.status=='success'){
     }
   }
     return <>
-    
+   
    {products?  <div className="container py-5">
     <div className="bg-light p-5 text-success fw-bolder animate__rotateInDownLeft animate__animated animate__bounce " >
             <h4 className="text-center my-2" >Shop Cart</h4>
@@ -71,7 +72,7 @@ if(responseCount.data.status=='success'){
             <h6>Number of Cart Items:<span className="text-dark"> {numOfCartItems} Products</span></h6>
             </div>
             <div className="row">
-            {products.map((pro)=>{return <div className="col-md-12 bg-light gy-2 d-flex justify-content-center align-items-center animate__zoomIn animate__animated animate__bounce  animate__delay-1s ">
+        {products.length==0? products.map((pro)=>{return <div className="col-md-12 bg-light gy-2 d-flex justify-content-center align-items-center animate__zoomIn animate__animated animate__bounce  animate__delay-1s ">
       <div className="col-md-1 col-4  ">
 <img src={pro.product.imageCover} className="w-100"/>
 <div className="py-2">
@@ -96,11 +97,11 @@ if(responseCount.data.status=='success'){
         
       </div>
      </div>
-})}
+}):<NoProducts/>}
 
-            {/* <button  onClick={()=>{
+            <button  onClick={()=>{
               navigatePayment('/payment')
-            }}  className="btn btn-outline-success m-auto w-25 fw-bolder my-2 ">Confirm</button> */}
+            }}  className="btn btn-outline-success m-auto w-25 fw-bolder my-2 ">Confirm</button>
 
           </div>
     </div> : <LoadingScreen/>}

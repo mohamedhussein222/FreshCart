@@ -2,17 +2,22 @@ import { Link, useNavigate } from "react-router-dom"
 import style from './NavBar.module.scss' ; 
 import logo from '../../Images/freshcart-logo.png'
 import { dataContext } from "../../Context/ContextStore";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { data } from "jquery";
+import axios from "axios";
 
 export default  function NavBar() {
   const navigate =  useNavigate();
   let dataa= useContext(dataContext);
- let {numProductCart}= useContext(dataContext);
+ let {numProductCart,wish}= useContext(dataContext);
      function logOut(){
       dataa.clearUserData();
         navigate('/Login'); 
      }
+
+//      useEffect(function(){
+//       GetloggedUserWishlist()
+//      },[])
 
     return (
         <>
@@ -56,6 +61,11 @@ export default  function NavBar() {
         <span className="badge position-absolute top-0 end-0 text-white bg-success">{numProductCart}</span>
       </Link>
      </li>
+     <Link className="nav-link  position-relative" to="/WishList">
+     
+     <span  className="text-danger fs-5 wish"><i class="fa-regular fa-heart"></i></span>
+     <span className="badge position-absolute top-0 end-0 text-white bg-success">{wish}</span>
+     </Link>
      <li className="nav-item">
           <Link className="nav-link fs-5"to="https://www.linkedin.com/in/mohamed-elbahnasy-b1184126b/"><i class="fa-brands fa-linkedin"></i></Link>
         </li>

@@ -14,6 +14,7 @@ export let dataContext= createContext();
     useEffect(function(){
       if(localStorage.getItem('tkn')!=null && user==null){
         getUserData();
+       
       }
      },[])
   function clearUserData(){
@@ -86,8 +87,48 @@ async function Updatecartproductquantity(id , count){
     headers:{'token':localStorage.getItem('tkn')},
   })
 }
+
+
+ async function AddProductToWishlist(id){
+  GetWishCount();
+ try {
+  let    {data}= await  axios.post(`https://route-ecommerce.onrender.com/api/v1/wishlist`,{
+  "productId" :id,
+ },{
+  headers:{"token":localStorage.getItem('tkn')},
+ })
+ if(data.status== 'success'){
+  toast.success(data.message,{duration:4000,className:"text-success px-4 fw-bolder  "});
+ }
+ console.log(data)
+ } catch (error) {
+  console.log("err" ,error)
+ }
+}
+
+ 
+
+ let[wish,setWish] =   useState(0);
+     async function GetWishCount (){
+      try {
+       let    {data}= await  axios.get(`https://route-ecommerce.onrender.com/api/v1/wishlist`,{
+       headers:{"token":localStorage.getItem('tkn')},
+      })
+     //  if(data.status== 'success'){
+     //   toast.success(data.message,{duration:4000,className:"text-success px-4 fw-bolder  "});
+     //  }
+      console.log(data)
+      setWish(data.count)
+      } catch (error) {
+       console.log("err" ,error)
+      }
+     }
+
+
+
+
     return (
-        <dataContext.Provider value={{user,getUserData,numProductCart,clearUserData,addProductToCart,GetLoggedusercart,RemovespecificcartItem,Updatecartproductquantity}}>
+        <dataContext.Provider value={{user,wish,getUserData,AddProductToWishlist,numProductCart,clearUserData,addProductToCart,GetLoggedusercart,RemovespecificcartItem,Updatecartproductquantity}}>
             {children}
         </dataContext.Provider>
     )

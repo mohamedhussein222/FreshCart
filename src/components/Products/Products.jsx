@@ -21,13 +21,13 @@ useEffect(()=>{
 },[])
     return (
         <>
-          
+
           
           {AllProducts? <div className="container py-5">
              <div className="row g-4">
-           {AllProducts.map((Product)=>{return  <div className="col-md-3  col-6 animate__zoomIn animate__animated animate__bounce  animate__delay-1s">
+           {AllProducts.map((Product)=>{return  <div className="col-md-2  col-6 animate__zoomIn animate__animated animate__bounce  animate__delay-1s">
                    <Link to={`/productdetails/${Product.id}`}>
-                   <div className="itemProducts p-1 rounded ">
+                   <div className="itemProducts  rounded ">
                     <img src={Product.imageCover} className="w-100" alt={Product.title}/>
                     <h6 className=" mt-3 px-3 text-success text-start ">{Product.title.split(' ').slice(0,2).join(' ')}</h6>
                     <h6 className="text-black px-3 mt-3 ">{Product.category.name}</h6>

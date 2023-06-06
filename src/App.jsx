@@ -30,6 +30,7 @@ import { useContext } from "react";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Allorders from "./components/Allorders/Allorders";
 import { Offline } from "react-detect-offline";
+import WishList from "./components/WishList/WishList";
 
 
 
@@ -47,12 +48,14 @@ export default function App() {
   const router = createBrowserRouter([
     {path : '', element : <Layout/>,children:[
       {path: "" , element:<Home/>},
+      {path:"FreshCart" , element:<Home/>},
       {path: "home" , element:<Home/>},
       {path: "navbar" , element:<NavBar />},
       {path : "productdetails/:id" , element : <ProductDetails/>},
       {path : "brandProducts/:id" , element :  <ProtectedRoute><BrandProducts/></ProtectedRoute>},
       {path : "forgotpassword" , element:< ForgotPassword/>},
       {path: "register"  ,element : <Register/>},
+      {path : "WishList" , element:<WishList/>},
       {path : "brands" , element : <ProtectedRoute> <Brands/></ProtectedRoute>},
       {path : "cart" , element :  <ProtectedRoute><Cart/></ProtectedRoute>},
       {path : "verfiycode" , element : <VerifyCode/>} , 

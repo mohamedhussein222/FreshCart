@@ -5,21 +5,25 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 export default  function PaymentCredit(props) {
+  let [isLoading,setisLoading]= useState(false);
  let { user} = useContext(dataContext);
        async function CreateCreditOrder(id ,values){
-  
+        setisLoading(true)
     try {
+     
     const {data}= await   axios.post(`https://route-ecommerce.onrender.com/api/v1/orders/checkout-session/${id}`,values,{
         headers:{"token":localStorage.getItem('tkn')},
-        params:{'url':'https://mohamedhussein222.github.io/FreshCart/allorders'}
+        params:{'url':'https://mohamedhussein222.github.io/FreshCart'}
        })
       console.log(data);
       if(data.status=='success'){
         window.open(data.session.url);
         console.log(data.session.url)
+        setisLoading(false)
       }
     } catch (error) {
       console.log(error)
+      setisLoading(false)
     }
      
    
@@ -51,8 +55,8 @@ export default  function PaymentCredit(props) {
             <label htmlFor="city" className="mt-3">City : </label>
             <input onChange={formPaymentCredit.handleChange}  onBlur={formPaymentCredit.handleBlur} value={formPaymentCredit.values.city} className="form-control mt-1" placeholder=" city" id="city" name="city" type="text"></input>
   
-        <button  type="submit" className="btn btn-success mt-3">Confirm Payment Cash</button>
-          
+        
+      {isLoading?<button type="button" className=" btn btn-success mt-3"><span className="fas fa-spinner fa-spin"></span></button>:<button  type="submit" className="btn btn-success mt-3">Confirm Payment Cash</button>}
         
            </form>  
 
