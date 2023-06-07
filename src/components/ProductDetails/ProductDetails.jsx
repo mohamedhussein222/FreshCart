@@ -78,7 +78,7 @@ dataa.AddProductToWishlist(details.id);
 
           </div>
           <h6>{details.title}</h6>
-          <p>{details.id}</p>
+         
           <p>{details.description}</p>
           {/* <h3>price: {details.price} EGP</h3> */}
    <div className="d-flex justify-content-between align-items-center">
